@@ -23,42 +23,6 @@
     });
   }
 
-  /* ── 근거 세기 — 아이캐치의 "근거 0행이면 버그" 를 이 페이지에 건다 ── */
-  var claims = Array.prototype.slice.call(document.querySelectorAll('.claim'));
-  var missing = claims.filter(function (el) {
-    var links = el.querySelectorAll('a.ev[href]');
-    for (var i = 0; i < links.length; i++) {
-      if (links[i].getAttribute('href').trim() !== '') return false;
-    }
-    return true;
-  });
-  var totalEl = document.getElementById('claims-total');
-  var missEl = document.getElementById('claims-missing');
-  var missBox = document.getElementById('claims-missing-box');
-  if (totalEl) totalEl.textContent = String(claims.length - missing.length);
-  if (missEl) missEl.textContent = String(missing.length);
-  if (missBox) {
-    missBox.classList.toggle('meter--ok', missing.length === 0);
-    missBox.classList.toggle('meter--bad', missing.length > 0);
-  }
-  missing.forEach(function (el) { el.setAttribute('data-missing-evidence', ''); });
-
-  var evBtn = document.getElementById('ev-toggle');
-  var evLabel = document.getElementById('ev-toggle-label');
-  function syncEv() {
-    var on = root.classList.contains('ev-on');
-    if (evBtn) evBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    if (evLabel) evLabel.textContent = on ? '근거 접기' : '근거 펼쳐 보기';
-  }
-  if (evBtn) {
-    evBtn.addEventListener('click', function () {
-      root.classList.toggle('ev-on');
-      store('evidence', root.classList.contains('ev-on') ? 'on' : 'off');
-      syncEv();
-    });
-  }
-  syncEv();
-
   /* ── 타임라인 점 툴팁: 마우스와 키보드 초점에서 같이 뜬다. 내용은 textContent 로만 넣는다 ── */
   var tip = document.getElementById('tip');
   function showTip(el) {
