@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03leedo — 포트폴리오</title>
+  <meta name="description" content="LLM Agent 를 만들고, 그 Agent 가 정말 그렇게 움직이는지 잽니다. 육아 비서 아이캐치의 놀이 추천 Agent 와 AI 품질 평가를 맡았습니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="03leedo — 모델에게 맡길 일과 코드가 막을 일을 나눕니다">
+  <meta property="og:description" content="아이캐치 Activity Agent · AI 품질 평가. 이 페이지의 주장에는 모두 근거 링크가 붙어 있습니다.">
+  <meta property="og:url" content="https://03leedo.github.io/">
+  <meta property="og:image" content="https://03leedo.github.io/assets/img/intro-video.jpg">
+  <meta name="theme-color" content="#f8f6f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141513" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    // 저장해 둔 테마 · 근거 보기를 그리기 전에 적용한다 — 깜빡임 방지. 저장소가 막혀 있어도 기본값으로 뜬다
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        if (localStorage.getItem('evidence') === 'on') document.documentElement.classList.add('ev-on');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a class="nav__brand" href="#top" aria-label="맨 위로">03leedo</a>
+      <nav class="nav__links" aria-label="페이지 목차">
+        <a href="#project">아이캐치</a>
+        <a href="#demo">데모</a>
+        <a href="#flow">흐름</a>
+        <a href="#troubles">부딪힌 것</a>
+        <a href="#results">결과</a>
+        <a href="#more">다른 작업</a>
+      </nav>
+      <div class="nav__tools">
+        <a class="btn btn--sm btn--solid" href="resume/03leedo-resume.pdf" download>이력서 PDF</a>
+        <button class="icon-btn" type="button" id="theme-toggle" aria-label="밝은 화면 · 어두운 화면 바꾸기">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.6A8.4 8.4 0 0 1 9.4 3.8a8.4 8.4 0 1 0 10.8 10.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────────────────────── 소개 ───────────────────────── -->
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <p class="eyebrow">포트폴리오 · 2026</p>
+        <h1 id="hero-title">모델에게 맡길 일과<br>코드가 막을 일을 나눕니다</h1>
+        <p class="lead">
+          LLM Agent 를 만들고, 그 Agent 가 정말 그렇게 움직이는지 잽니다.
+          <span class="claim">카카오테크 캠퍼스 4기 팀 프로젝트에서 육아 비서 <b>아이캐치</b>의 놀이 추천 Agent 와 AI 품질 평가를 맡았습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#만든-사람들">README · 만든 사람들</a></span>
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#project">대표 프로젝트 보기</a>
+          <a class="btn" href="resume/03leedo-resume.pdf" download>이력서 PDF 받기</a>
+        </div>
+      </div>
+
+      <aside class="card idcard" aria-label="프로필">
+        <div class="idcard__head">
+          <img class="idcard__avatar" src="assets/favicon.svg" width="64" height="64" alt="">
+          <div>
+            <p class="idcard__label">닉네임</p>
+            <p class="idcard__name">03leedo</p>
+          </div>
+        </div>
+        <dl class="idcard__list">
+          <div>
+            <dt>지금 관심 있는 것</dt>
+            <dd>
+              <ul class="tags">
+                <li>LLM Agent 설계</li>
+                <li>Tool calling · Structured Output</li>
+                <li>AI 품질 평가(eval)</li>
+                <li>규칙과 모델의 경계</li>
+                <li>공공데이터 연동</li>
+                <li>RAG</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd><a class="link" href="https://github.com/03leedo">github.com/03leedo</a></dd>
+          </div>
+          <div>
+            <dt>지금</dt>
+            <dd>카카오테크 캠퍼스 4기 · AI Agent 개발</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- 이 페이지의 규칙 — 근거 카운터 -->
+    <section class="wrap" aria-labelledby="rule-title">
+      <div class="rule">
+        <div class="rule__text">
+          <h2 class="rule__title" id="rule-title">이 페이지의 규칙</h2>
+          <p>
+            아이캐치에는 <q>근거 기록을 달지 못한 개인화 추천은 버그다</q> 라는 규칙이 있습니다.
+            이 페이지도 같은 규칙으로 썼습니다. 저에 대한 주장마다 PR · 문서 근거를 달았고,
+            근거가 빠진 주장은 오른쪽 숫자가 페이지를 읽어 직접 셉니다.
+          </p>
+        </div>
+        <div class="rule__meter" aria-live="polite">
+          <div class="meter">
+            <span class="meter__num" id="claims-total">–</span>
+            <span class="meter__label">근거를 단 주장</span>
+          </div>
+          <div class="meter meter--ok" id="claims-missing-box">
+            <span class="meter__num" id="claims-missing">–</span>
+            <span class="meter__label">근거 없는 주장</span>
+          </div>
+          <button class="btn btn--toggle" type="button" id="ev-toggle" aria-pressed="false">
+            <span class="hl-swatch" aria-hidden="true"></span><span id="ev-toggle-label">근거 펼쳐 보기</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 대표 프로젝트 ───────────────────────── -->
+    <section class="project" id="project" aria-labelledby="project-title">
+      <div class="wrap">
+        <p class="eyebrow">대표 프로젝트</p>
+        <h2 class="h-section" id="project-title">아이캐치</h2>
+        <p class="sub">한 줄만 남기면, 우리 아이에게 맞는 다음 할 일로 돌아오는 육아 비서</p>
+
+        <div class="proj-top">
+          <a class="video card" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#readme" aria-label="아이캐치 소개 영상 보기 (GitHub README 에서 재생)">
+            <img src="assets/img/intro-video.jpg" width="1280" height="720" alt="아이캐치 소개 영상 첫 장면. 어린이집 앞에서 보호자가 휴대폰을 보고 아이가 올려다본다">
+            <span class="video__cap">소개 영상 0:42 — GitHub README 에서 재생됩니다</span>
+          </a>
+
+          <div class="facts card">
+            <dl class="facts__list">
+              <div><dt>기간</dt><dd>2026.09 – 2026.11 · 10주</dd></div>
+              <div><dt>팀</dt><dd>6명 · 카카오테크 캠퍼스 4기 2단계 · 부산대 3팀</dd></div>
+              <div><dt>내 몫</dt><dd>AI Agent(Activity) · AI 품질 평가 · 공공데이터 연동</dd></div>
+              <div><dt>배포</dt><dd><span class="claim">웹 · Android 웹뷰 앱. CI 를 통과하면 AWS EC2 에 자동 배포<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/ops/deploy-v1/">배포 문서</a></span></dd></div>
+            </dl>
+            <div class="facts__links">
+              <a class="btn btn--solid" href="#demo">데모 보기</a>
+              <a class="btn" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3">소스 코드</a>
+              <a class="btn" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/">개발 문서</a>
+              <a class="btn" href="https://icatch.ai.kr">실서비스 icatch.ai.kr</a>
+            </div>
+            <p class="fine">실서비스는 팀이 서버를 켜 둔 동안에만 열리고, 카카오 계정으로 로그인합니다. 닫혀 있으면 아래 데모로 보실 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 문제 정의 -->
+      <div class="wrap block" id="problem">
+        <h3 class="h-block"><span class="h-num">01</span>문제 정의</h3>
+        <div class="read">
+          <p>
+            일하면서 아이를 키우는 보호자는 알림장 · 일정 · 식사 · 지난 경험처럼 흩어진 정보를 매번 직접 찾아 잇고,
+            지금 무엇이 중요한지 판단해 다음 행동까지 정합니다. 기록 앱이 있지만 오래 쓰이지 않았습니다.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat card">
+            <p class="stat__num">0<small> / 9</small></p>
+            <p class="stat__txt"><span class="claim">아이가 있는 보호자 9명 중 지금 기록을 남기는 사람<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#육아-기록은-귀찮고-적어도-돌아오는-게-없었습니다">설문</a></span></p>
+          </div>
+          <div class="stat card">
+            <p class="stat__num">7<small> / 9</small></p>
+            <p class="stat__txt"><span class="claim">하다가 그만둔 사람. 그중 5명이 <q>매일 입력이 번거로웠다</q> 나 <q>다시 볼 일이 없었다</q> 를 골랐습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#육아-기록은-귀찮고-적어도-돌아오는-게-없었습니다">설문</a></span></p>
+          </div>
+          <div class="stat card stat--mine">
+            <p class="stat__num">8<small> / 9</small></p>
+            <p class="stat__txt"><span class="claim">지난 한 달 사이 주말에 아이와 무엇을 할지 검색한 사람<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#육아-기록은-귀찮고-적어도-돌아오는-게-없었습니다">설문</a></span>
+              <span class="stat__note">→ 제가 맡은 놀이 추천이 푸는 문제</span></p>
+          </div>
+        </div>
+        <p class="fine center">2026년 8월 · 보호자 10명 온라인 설문. 표본이 작아서 방향을 잡는 데만 썼습니다.</p>
+
+        <div class="read">
+          <p class="pull">
+            부족한 건 정보가 아니라 <b>연결</b>이었습니다. 보호자는 이미 매일 가족에게 아이 이야기를 합니다.
+            새 습관을 요구하지 않고, 그 한 줄을 받는 곳만 바꿉니다.
+          </p>
+          <p>
+            가족에게 말하듯 한 줄을 남기면 AI 가 식사 · 건강 · 놀이 기록으로 나눠 저장하고, 쌓인 기록을 근거로
+            저녁 메뉴 · 주말 놀이 · 일정 같은 다음 할 일을 준비합니다. 추천마다 어떤 기록을 썼는지 보여 주고,
+            기록이 없으면 <q>일반 추천</q> 이라고 밝힙니다. 알레르기와 날짜는 모델이 아니라 코드가 막습니다.
+          </p>
+        </div>
+
+        <ol class="shots" aria-label="한 줄이 추천이 되기까지 화면 네 장">
+          <li><img src="assets/img/01-write.png" loading="lazy" width="540" height="1170" alt="홈 화면 아래 입력 칸에 한 줄을 적은 모습"><span>① 말하듯 적습니다</span></li>
+          <li><img src="assets/img/02-saved.png" loading="lazy" width="540" height="1170" alt="한 줄이 식사 기록 1건과 건강 기록 1건으로 저장된 화면"><span>② 나눠서 저장합니다</span></li>
+          <li><img src="assets/img/03-suggest.png" loading="lazy" width="540" height="1170" alt="추천 이유와 사용한 기록 3건이 달린 저녁 추천 카드"><span>③ 근거가 달린 추천</span></li>
+          <li><img src="assets/img/04-approve.png" loading="lazy" width="540" height="1170" alt="찾은 일정을 캘린더에 넣을지 묻는 화면"><span>④ 되돌릴 수 없는 것만 묻습니다</span></li>
+        </ol>
+        <p class="fine center">화면: 아이캐치 팀 저장소의 README</p>
+      </div>
+
+      <!-- 데모 -->
+      <div class="wrap block" id="demo">
+        <h3 class="h-block"><span class="h-num">02</span>데모</h3>
+        <div class="demo card">
+          <figure class="demo__phone">
+            <img src="assets/img/demo-pickup.gif" loading="lazy" width="400" height="772" alt="실제 앱 화면. 보호자가 말로 세 문장을 남기면 기록 두 건으로 나뉘어 저장되고, 계란말이 기록을 근거로 다른 계란 요리 추천이 나오고, 처음 보는 식품을 먹어 본 적이 있는지 물은 뒤, 일정으로 만들지 묻는다">
+          </figure>
+          <div class="demo__text">
+            <p class="demo__k"><span class="claim">실제 앱 · 시연 영상에서 하원길 장면만 자른 것<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#한-줄이-추천이-되기까지">README</a></span></p>
+            <p class="demo__said">보호자가 말로 남긴 것은 이것뿐입니다.</p>
+            <blockquote class="demo__quote">민준이가 점심을 많이 안 먹었대. 저녁엔 오일째 계란말이만 해달래. 오늘 저녁은 다른 계란 요리 추천해 줘</blockquote>
+            <ol class="demo__steps">
+              <li>한 줄이 <b>기록 두 건</b>으로 나뉘어 저장됩니다</li>
+              <li>닷새째 계란말이였다는 기록을 근거로 <b>다른 계란 요리</b>를 고릅니다</li>
+              <li><b>처음 보는 식품</b>은 먹어 본 적이 있는지 먼저 묻습니다</li>
+              <li>일정은 보호자가 누르기 전까지 <b>캘린더에 들어가지 않습니다</b></li>
+            </ol>
+            <div class="demo__more">
+              <a class="btn btn--sm" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#readme">소개 영상 전체 (0:42)</a>
+              <a class="btn btn--sm" href="https://icatch.ai.kr">실서비스에서 써 보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 역할 -->
+      <div class="wrap block" id="role">
+        <h3 class="h-block"><span class="h-num">03</span>역할</h3>
+        <div class="read">
+          <p>
+            <span class="claim">6명 중 AI Agent 를 맡은 2명 가운데 한 명입니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#만든-사람들">README</a></span>
+            <span class="claim">10주 동안 커밋 300개를 쓰고 PR 68개를 머지했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pulls?q=is%3Apr+author%3A03leedo+is%3Amerged">PR 목록</a></span>
+          </p>
+        </div>
+
+        <div class="roles">
+          <article class="role card role--main">
+            <div class="role__head">
+              <p class="role__tag">주 담당</p>
+              <h4>Activity Agent — 놀이 추천</h4>
+              <p>
+                <span class="claim">아이의 놀이 기록 · 그날 날씨 · 일정 · 근처 장소와 행사를 엮어 지금 해 볼 수 있는 놀이를 최대 3개 추천하는 Agent 입니다. 설계 문서부터 썼습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/159">PR #159</a><a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서</a></span>
+              </p>
+              <p class="role__motto">한 줄 원칙 — <b>후보는 모델이 만들고, 안전 판정의 근거는 모델 출력 바깥에 둔다.</b></p>
+            </div>
+            <ul class="ticks">
+              <li><span class="claim">이 폴더의 커밋 142개 중 116개가 제 것입니다 · 코드 약 7,600줄<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/commits/develop/apps/api/app/agents/activity?author=03leedo">커밋</a></span></li>
+              <li><span class="claim">후보는 모델이 만들고, 안전 판정은 모델 출력 바깥에 뒀습니다 — 위험 용어 사전 × 월령으로 막고 경고합니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/200">PR #200</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/261">#261</a></span></li>
+              <li><span class="claim">놀이 예시 문서 80행을 현행 표준보육과정 고시 기준으로 만들었습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/332">PR #332</a></span></li>
+              <li><span class="claim"><q>다른 행사 추천해줘</q> 를 앞 대화에 이어 찾고, 이미 보여 준 추천은 다시 내지 않게 했습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/853">PR #853</a></span></li>
+            </ul>
+          </article>
+
+          <article class="role card">
+            <p class="role__tag">평가</p>
+            <h4>AI 품질 점검(eval) 하네스</h4>
+            <p>
+              <span class="claim">절대 규칙을 코드로 판정하는 불변식 14개, 능력별 단발 프로브, 일주일 시나리오, 부품 10 × 장애 4 의 장애 점검표를 만들었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/788">PR #788</a><a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/eval/eval-v1/">eval 문서</a></span>
+              <span class="claim">11월 10일 기준선을 잡고 실패마다 원인을 하나로 갈라 담당과 이슈를 붙였습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/results/2026-11-10.md">기준선 결과</a></span>
+            </p>
+          </article>
+
+          <article class="role card role--tall">
+            <p class="role__tag">연동</p>
+            <h4>공공데이터 어댑터</h4>
+            <ul class="ticks">
+              <li><span class="claim">기상청 단기예보 · 에어코리아 대기질 · 자외선 · 특보 네 조회를 묶어 야외 가능 여부를 판정합니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/328">PR #328</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/346">#346</a></span></li>
+              <li><span class="claim">단기예보 범위 밖의 주말은 기상청 중기 육상예보로 봅니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870">PR #870</a></span></li>
+              <li><span class="claim">한국관광공사 TourAPI 로 그날 열리는 축제 · 공연과 박물관 · 과학관을 찾습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/668">PR #668</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/858">#858</a></span></li>
+              <li><span class="claim">공원 · 도서관 목록은 미리 적재해 거리를 서버 안에서 계산합니다 — 보호자 좌표를 외부 API 로 보내지 않습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/583">PR #583</a></span></li>
+              <li><span class="claim">Health Agent 의 병원 찾기 tool (국립중앙의료원)<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/517">PR #517</a></span></li>
+            </ul>
+          </article>
+
+          <article class="role card">
+            <p class="role__tag">초기</p>
+            <h4>카카오 로그인</h4>
+            <p><span class="claim">첫 주에 카카오 로그인 API 명세 v1 을 썼고, 운영 환경에서 키가 빠지면 서버가 뜨지 않게 막았습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/19">PR #19</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/98">#98</a></span></p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 흐름 (인터랙티브) -->
+      <div class="wrap block" id="flow">
+        <h3 class="h-block"><span class="h-num">04</span>한 줄이 놀이 추천이 되기까지</h3>
+        <div class="read">
+          <p>
+            새 기능을 붙일 때마다 먼저 물었습니다. <b>틀렸을 때 되돌릴 수 있나?</b> 못 되돌리면 사람이 승인합니다.
+            <b>100% 맞아야 하나?</b> 그러면 코드가 합니다. 나머지만 LLM 이 합니다.
+            아래는 제가 만든 Activity Agent 가 한 줄을 처리하는 순서입니다.
+          </p>
+        </div>
+
+        <div class="flow-box card">
+          <div class="flow-head">
+            <div class="flow-input">
+              <span class="flow-input__who">보호자</span>
+              <p class="flow-input__msg">이번 주말에 밖에서 놀 만한 데 있을까?</p>
+              <span class="flow-input__meta">예시 아이 · 36개월 · 등록 알레르기 밀</span>
+            </div>
+            <div class="flow-ctl">
+              <ul class="legend" aria-label="누가 하는가">
+                <li class="a-code"><i></i>코드 <b data-count="code">0</b></li>
+                <li class="a-llm"><i></i>LLM <b data-count="llm">0</b></li>
+                <li class="a-human"><i></i>사람 <b data-count="human">0</b></li>
+              </ul>
+              <div class="flow-btns">
+                <button class="btn btn--solid btn--sm" type="button" id="flow-play">▶ 차례로 보기</button>
+                <button class="btn btn--sm" type="button" id="flow-reset" disabled>처음으로</button>
+              </div>
+            </div>
+          </div>
+
+          <ol class="flow" id="flow-list">
+            <li class="step" data-actor="llm">
+              <div class="step__node"><span>LLM</span></div>
+              <div class="step__body">
+                <h4>Supervisor 가 요청인지 기록인지 가른다</h4>
+                <p>모델이 의도를 <q>요청형</q> 으로 보고 놀이를 맡는 Activity 에 넘깁니다. 맡길 Agent 는 최대 2개입니다.</p>
+                <pre class="step__out">의도: 요청형 → agent: activity</pre>
+              </div>
+            </li>
+            <li class="step" data-actor="code">
+              <div class="step__node"><span>코드</span></div>
+              <div class="step__body">
+                <h4>모델을 부르기 전에 날씨부터 본다</h4>
+                <p>단기예보 · 대기질 · 자외선 · 특보를 동시에 조회하고, 나들이를 물었으면 근처 행사 읽기를 같이 시작합니다. 주말은 하루라도 바깥이 되면 엽니다.</p>
+                <pre class="step__out">토 바깥 가능 · 일 비 → 주말 바깥 열림</pre>
+              </div>
+            </li>
+            <li class="step" data-actor="code">
+              <div class="step__node"><span>코드</span></div>
+              <div class="step__body">
+                <h4>월령으로 열 tool 을 정한다</h4>
+                <p>나이 계산은 모델에게 묻지 않습니다. 36개월이라 관심 프로필 조회가 열리고, 위치가 있어 장소 · 행사 조회도 열립니다. 월령에 맞는 [예시] 문서 5행을 고릅니다.</p>
+                <pre class="step__out">열린 tool: 기억 · 날씨 · 일정 · 장소 · 행사</pre>
+              </div>
+            </li>
+            <li class="step" data-actor="llm">
+              <div class="step__node"><span>LLM</span></div>
+              <div class="step__body">
+                <h4>모델이 tool 을 불러 후보 3개를 만든다</h4>
+                <p>놀이 기억 · 근처 장소 · 그날 행사를 조회하고 마지막에 한 번 후보를 제출합니다. 알레르기 이름은 프롬프트에 싣지 않습니다.</p>
+                <pre class="step__out">① 공원에서 낙엽 모아 왕관 만들기
+② 가을 축제에서 인형극 보기
+③ 쿠키 반죽 빚어 굽기 체험</pre>
+              </div>
+            </li>
+            <li class="step" data-actor="code">
+              <div class="step__node"><span>코드</span></div>
+              <div class="step__body">
+                <h4>안전 필터가 검증의 맨 앞에 선다</h4>
+                <p>위험 용어 사전을 월령과 대조하고, 후보의 음식 칸은 Food 메뉴 판정으로 봅니다. 걸린 후보는 고치지 않고 뺍니다. 모델에게는 <b>사유 없이</b> 제외 목록만 주고 한 번 더 부릅니다 — 사유를 알려 주면 단어만 바꿔 빠져나가는 법을 가르치게 됩니다.</p>
+                <pre class="step__out">③ foods: [쿠키] → 밀 → 제외
+재호출 1회 → ③ 도서관에서 가을 그림책 읽기</pre>
+              </div>
+            </li>
+            <li class="step" data-actor="code">
+              <div class="step__node"><span>코드</span></div>
+              <div class="step__body">
+                <h4>지어낸 이름은 내보내지 않는다</h4>
+                <p>장소 · 행사 이름은 이번 조회 결과에 있는 것만, 행사는 그날 실제로 열리는지 일정 원문으로 봅니다. 근거 id 는 조회가 돌려준 것만 받고, 7일 안에 한 놀이는 다시 내지 않습니다.</p>
+                <pre class="step__out">장소 ✓ · 행사 일정 ✓ · 근거 id ✓ · 최근 중복 ✓</pre>
+              </div>
+            </li>
+            <li class="step" data-actor="human">
+              <div class="step__node"><span>사람</span></div>
+              <div class="step__body">
+                <h4>보호자가 고르고, 일정은 승인해야 들어간다</h4>
+                <p>추천에는 이유와 사용한 기록이 붙습니다. 캘린더에 넣는 것은 되돌리기 어려워서 보호자가 누르기 전에는 저장하지 않습니다.</p>
+                <div class="mini-card">
+                  <p class="mini-card__tag">예시 결과</p>
+                  <p class="mini-card__title">OO근린공원에서 낙엽 모아 왕관 만들기</p>
+                  <p class="mini-card__reason"><span>추천 이유</span>지난주 낙엽 놀이 기록이 두 번 있어요. 토요일은 맑아서 바깥에서 하기 좋아요.</p>
+                  <p class="mini-card__ev">사용한 기록 2건 · 낙엽 밟기 놀이 · 공원 산책</p>
+                  <p class="mini-card__ask">이 놀이를 토요일 일정으로 넣을까요? <span class="mini-btn">넣기</span></p>
+                </div>
+              </div>
+            </li>
+          </ol>
+          <p class="fine">
+            <span class="claim">실제 호출 화면이 아니라 설계 문서의 실행 흐름 · 출력 검증 순서를 따라 다시 그린 것입니다. 아이 정보와 후보는 지어낸 예시입니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 §3</a></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 부딪힌 것 -->
+      <div class="wrap block" id="troubles">
+        <h3 class="h-block"><span class="h-num">05</span>부딪힌 것</h3>
+        <div class="read">
+          <p>고친 것보다 되돌린 것에서 더 많이 배웠습니다. 세 가지를 골랐습니다.</p>
+        </div>
+
+        <div class="stories">
+          <article class="story card">
+            <header>
+              <p class="story__k">근거 검사 · 프롬프트</p>
+              <h4>근거 검사를 더했더니 억지 추천이 늘었다</h4>
+            </header>
+            <dl class="story__dl">
+              <div><dt>문제</dt><dd><span class="claim">일반 추천 <q>종이컵 쌓기</q> 에 상관없는 <q>노래하며 손 씻기</q> 문서가 근거로 붙었습니다. 관련성 검사를 더했는데, 같이 바꾼 프롬프트 지시가 모델을 예시 쪽으로 끌어당겼습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/557">PR #557</a></span></dd></div>
+              <div><dt>한 일</dt><dd><span class="claim">통째로 되돌리고 그 범위를 확인하지 않은 것이 제 실수라고 PR 에 적었습니다. 그다음 <q>보호자가 놀이를 정해 물으면 그 요청에 맞춰 낸다</q> 로 다시 설계했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/590">PR #590</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/597">#597</a></span></dd></div>
+              <div><dt>재 보고 정한 것</dt><dd><span class="claim">후보가 요청에 맞는지 코드로 막기 전에 먼저 쟀습니다. 요청 기반 후보 391개를 다른 모델로 판정하고, 판정 모델을 믿어도 되는지 일부러 엇갈리게 붙인 대조군 120개를 같이 넣었습니다. 관계없는 후보는 1건이라 코드로 막지 않았습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#8-근거-검사를-더하자-억지-추천이-늘었다">기록</a></span></dd></div>
+            </dl>
+            <div class="story__nums">
+              <div class="num"><span class="num__v">40% → 14%</span><span class="num__k claim">예시를 베낀 일반 추천 (같은 54케이스)<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#8-근거-검사를-더하자-억지-추천이-늘었다">측정</a></span></div>
+              <div class="num"><span class="num__v">9 → 2</span><span class="num__k claim">108 run 중 20초를 넘긴 run<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/597">PR #597</a></span></div>
+              <div class="num"><span class="num__v">12.3 → 9.0초</span><span class="num__k claim">중앙 응답 시간<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/597">PR #597</a></span></div>
+            </div>
+          </article>
+
+          <article class="story card">
+            <header>
+              <p class="story__k">안전 · 알레르기</p>
+              <h4>알레르기를 막으면 새고, 풀면 오탐이 난다</h4>
+            </header>
+            <dl class="story__dl">
+              <div><dt>문제</dt><dd><span class="claim">놀이 문장에서 알레르기 이름을 글자로 찾으니 <q>장난감 자동차</q> 가 감자로 걸리고, 밀 알레르기 아이에게 <q>쿠키 반죽 빚어 굽기</q> 는 통과했습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#9-알레르기를-막으면-새고-풀면-오탐이-난다">기록</a></span></dd></div>
+              <div><dt>한 일</dt><dd><span class="claim">사례 몇 개가 아니라 시드 전수(놀이 80행 · 교육 104행 × 식품 이름 77개)로 회귀 테스트를 걸어 오탐을 없앴습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/556">PR #556</a></span>
+                <span class="claim">그래도 요리 이름이 새서 구조를 바꿨습니다. 후보에 음식 칸을 두고 그 칸을 Food 메뉴 판정으로 거릅니다. 알레르기 이름은 여전히 모델에 보내지 않습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/issues/582">실험 #582</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/743">PR #743</a></span></dd></div>
+            </dl>
+            <div class="story__nums">
+              <div class="num"><span class="num__v">17 → 0</span><span class="num__k claim">시드 전수 테스트의 오탐<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/556">PR #556</a></span></div>
+              <div class="num"><span class="num__v">17 → 3</span><span class="num__k claim">알레르기 음식을 실제로 먹거나 만지는 추천 (54케이스 · 로컬 실험, 머지 뒤 재측정은 남음)<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#9-알레르기를-막으면-새고-풀면-오탐이-난다">측정</a></span></div>
+            </div>
+          </article>
+
+          <article class="story card">
+            <header>
+              <p class="story__k">지연 · 20초 예산</p>
+              <h4>그날 첫 질문만 시간 안에 못 끝났다</h4>
+            </header>
+            <dl class="story__dl">
+              <div><dt>문제</dt><dd><span class="claim">캐시가 빈 첫 run 에서 <q>주말에 갈만한 행사 추천해줘</q> 가 <q>시간 안에 답을 만들지 못했어요</q> 로 끝났습니다. Activity 만 17~19초여서 앞 단계까지 더하면 20초를 넘었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></dd></div>
+              <div><dt>한 일</dt><dd><span class="claim">행사 읽기를 날씨 조회와 동시에 시작하고, 일정 읽기에 상한을 뒀습니다. 마감이 가까우면 마지막 후보 작성 몫 6초를 남기고, 못 읽은 행사는 이번 결과에서만 빼고 뒤에서 캐시를 채웁니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></dd></div>
+            </dl>
+            <div class="story__nums">
+              <div class="num"><span class="num__v">16.8–19.2 → 13.7–16.8초</span><span class="num__k claim">캐시가 빈 첫 run 의 Activity 전체 (실제 모델 · TourAPI)<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- 결과 -->
+      <div class="wrap block" id="results">
+        <h3 class="h-block"><span class="h-num">06</span>결과</h3>
+        <div class="read">
+          <p>
+            <q>근거를 단다</q> · <q>알레르기는 코드가 막는다</q> 는 말은 재 봐야 압니다.
+            제가 만든 평가 하네스로 실제 모델을 돌려 잰 팀 전체 숫자입니다.
+          </p>
+        </div>
+        <div class="kpis">
+          <div class="kpi card">
+            <p class="kpi__v">0<small>건</small></p>
+            <p class="kpi__k">절대 규칙 위반</p>
+            <p class="kpi__d"><span class="claim">147 run 을 코드로 판정 · 11-10 기준선<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/results/2026-11-10.md">결과</a></span></p>
+          </div>
+          <div class="kpi card">
+            <p class="kpi__v">9<small> / 10</small></p>
+            <p class="kpi__k">기획 때 정한 시나리오</p>
+            <p class="kpi__d"><span class="claim">실제 모델 · 3회 모두 통과해야 통과 · 11-11<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/results/2026-11-11-headline.md">결과</a></span></p>
+          </div>
+          <div class="kpi card">
+            <p class="kpi__v">39<small> / 40</small></p>
+            <p class="kpi__k">장애 점검</p>
+            <p class="kpi__d"><span class="claim">부품 10 × 장애 4 · <code>make test</code> 마다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/faults.md">점검표</a></span></p>
+          </div>
+          <div class="kpi card">
+            <p class="kpi__v">4.4<small>초</small></p>
+            <p class="kpi__k">기록 한 줄 응답 중앙값</p>
+            <p class="kpi__d"><span class="claim">20초를 넘겨 부분 결과로 바뀐 실행 0 / 143<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#정말-그렇게-움직이는지-쟀습니다">README</a></span></p>
+          </div>
+        </div>
+
+        <div class="mine card">
+          <h4>제 몫만 따로 세면</h4>
+          <ul class="mine__list">
+            <li><b>116 / 142</b><span class="claim">Activity Agent 폴더 커밋 중 제 커밋<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/commits/develop/apps/api/app/agents/activity?author=03leedo">커밋</a></span></li>
+            <li><b>696</b><span class="claim">Activity Agent 단위 테스트 함수<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/tree/develop/apps/api/tests/unit/agents/activity">테스트 폴더</a></span></li>
+            <li><b>68</b><span class="claim">머지한 PR (팀 전체 553개)<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pulls?q=is%3Apr+author%3A03leedo+is%3Amerged">PR 목록</a></span></li>
+            <li><b>6</b><span class="claim">run 마다 부르는 공공데이터 API — 기상청 단기 · 중기예보 · 자외선 · 특보, 에어코리아 대기질, TourAPI 행사<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 D8</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870">#870</a></span></li>
+          </ul>
+        </div>
+
+        <aside class="honest">
+          <h4>아직 못 한 것</h4>
+          <ul>
+            <li><span class="claim">실제 사용자는 아직 거의 없습니다(팀과 테스터). 위 숫자는 모두 미리 써 둔 입력으로 잰 값입니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#정말-그렇게-움직이는지-쟀습니다">README</a></span></li>
+            <li><span class="claim">추천 카드의 채택 · 평가는 아직 아이의 성향에 반영되지 않습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 §1</a></span></li>
+            <li><span class="claim">후보가 보호자의 요청에 맞는지는 코드가 보지 않고 사람이 결과를 읽습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#8-근거-검사를-더하자-억지-추천이-늘었다">기록</a></span></li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- 기술 -->
+      <div class="wrap block" id="tech">
+        <h3 class="h-block"><span class="h-num">07</span>기술</h3>
+        <div class="tech">
+          <div class="tech__col card">
+            <h4>제가 쓴 것</h4>
+            <ul class="tags tags--lg">
+              <li>Python 3.12</li><li>FastAPI</li><li>Pydantic</li><li>asyncio</li>
+              <li>PostgreSQL + pgvector</li><li>Alembic</li>
+              <li>LLM Tool Calling</li><li>Structured Output</li>
+              <li>pytest</li><li>GitHub Actions</li>
+              <li>기상청 · 에어코리아 API</li><li>TourAPI</li><li>공공데이터포털</li>
+            </ul>
+          </div>
+          <div class="tech__col card">
+            <h4>팀이 함께 쓴 것</h4>
+            <ul class="tags tags--lg tags--muted">
+              <li>Next.js 16</li><li>React 19</li><li>Expo WebView</li>
+              <li>Redis 7</li><li>Docker Compose</li><li>Caddy 2</li>
+              <li>AWS EC2 · S3</li><li>Grafana Cloud</li>
+            </ul>
+            <p class="fine">
+              <span class="claim">저장이 검색보다 먼저여야 해서 백엔드와 AI 를 한 서비스로 묶었고, 벡터 DB 를 따로 두지 않고 PostgreSQL 한 곳에 뒀습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#어떻게-만들었나">README</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── 다른 작업 ───────────────────────── -->
+    <section class="wrap block more" id="more" aria-labelledby="more-title">
+      <p class="eyebrow">그 밖의 작업</p>
+      <h2 class="h-section h-section--sm" id="more-title">다른 프로젝트</h2>
+      <div class="more__grid">
+        <a class="mcard card" href="https://github.com/03leedo/noticedelta">
+          <p class="mcard__meta">개인 · 2026.10 – · Python</p>
+          <h3>NoticeDelta</h3>
+          <p>정정공고가 나오면 내 자격 · 마감 · 금액 변화만 골라 알려 주는 지원사업 비서. 자격은 코드로 판정하고 판정마다 원문 근거를 붙입니다. 바뀐 문단에 걸린 필드만 다시 추출하는 변경 영향 엔진.</p>
+          <span class="mcard__go">저장소 →</span>
+        </a>
+        <a class="mcard card" href="https://github.com/03leedo/TrustLens">
+          <p class="mcard__meta">개인 · 2026.05 – 06 · Kotlin · Android</p>
+          <h3>TrustLens</h3>
+          <p>이미지를 여러 근거로 분석하는 검증 보조 앱. AI 생성 가능성 · 동일 이미지 검색 · EXIF · ELA 와 직접 학습한 TFLite 품질 모델을 한 리포트로 묶습니다.</p>
+          <span class="mcard__go">저장소 →</span>
+        </a>
+        <a class="mcard card" href="https://github.com/03leedo/pnuai-b-06-bomdongmarket">
+          <p class="mcard__meta">팀 · 제7회 PNU 창의융합 AI 해커톤</p>
+          <h3>FarmBroker</h3>
+          <p>도심 유휴공간 · 도심 농부 · 소비자를 잇는 스마트팜 중개 플랫폼. 공간 수익 예측, AI 작물 추천, 매칭 · 계약 · 생산 이력까지.</p>
+          <span class="mcard__go">저장소 →</span>
+        </a>
+        <a class="mcard card" href="https://github.com/03leedo/LoL_AI_Platform">
+          <p class="mcard__meta">개인 · 2026.07 · Next.js · FastAPI</p>
+          <h3>LoL AI Platform</h3>
+          <p>Riot API 데이터와 타임라인 분석 · 승률 예측 · Agent 가 쓰는 코칭 리포트를 묶은 게임 분석 플랫폼.</p>
+          <span class="mcard__go">저장소 →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 이력서 -->
+    <section class="wrap block" id="resume" aria-labelledby="resume-title">
+      <div class="cta card">
+        <div>
+          <h2 class="cta__title" id="resume-title">이력서</h2>
+          <p>이 페이지의 내용을 A4 한 쪽으로 줄였습니다. 숫자마다 잰 조건을 같이 적었습니다.</p>
+        </div>
+        <div class="cta__btns">
+          <a class="btn btn--solid" href="resume/03leedo-resume.pdf" download>PDF 받기</a>
+          <a class="btn" href="resume/03leedo-resume.pdf">브라우저로 보기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <p>© 2026 03leedo · <a class="link" href="https://github.com/03leedo">GitHub</a></p>
+      <p class="fine">이 페이지는 Claude Code 와 함께 만들었습니다. 아이캐치 화면 · 영상 이미지는 팀 저장소의 것입니다.</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
