@@ -23,30 +23,6 @@
     });
   }
 
-  /* ── 타임라인 점 툴팁: 마우스와 키보드 초점에서 같이 뜬다. 내용은 textContent 로만 넣는다 ── */
-  var tip = document.getElementById('tip');
-  function showTip(el) {
-    if (!tip) return;
-    tip.textContent = el.getAttribute('data-tip') || '';
-    tip.hidden = false;
-    var r = el.getBoundingClientRect();
-    var w = tip.offsetWidth, h = tip.offsetHeight;
-    var vw = document.documentElement.clientWidth;
-    var left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), vw - w - 12);
-    var top = r.top - h - 10;
-    if (top < 72) top = r.bottom + 10;
-    tip.style.left = left + 'px';
-    tip.style.top = top + 'px';
-  }
-  function hideTip() { if (tip) tip.hidden = true; }
-  Array.prototype.forEach.call(document.querySelectorAll('[data-tip]'), function (el) {
-    el.addEventListener('mouseenter', function () { showTip(el); });
-    el.addEventListener('focus', function () { showTip(el); });
-    el.addEventListener('mouseleave', hideTip);
-    el.addEventListener('blur', hideTip);
-  });
-  window.addEventListener('scroll', hideTip, { passive: true });
-
   /* ── 흐름: 누가 하는지 세고, 차례로 보여 준다 ── */
   var list = document.getElementById('flow-list');
   if (!list) return;

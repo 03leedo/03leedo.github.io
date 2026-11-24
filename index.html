@@ -42,7 +42,6 @@
         <a href="#skills">기술</a>
         <a href="#project">아이캐치</a>
         <a href="#troubles">트러블슈팅</a>
-        <a href="#results">결과</a>
         <a href="#more">다른 프로젝트</a>
         <a href="#career">수상 · 교육</a>
       </nav>
@@ -163,6 +162,7 @@
               <div><dt>기간</dt><dd>2026.09 – 2026.11 · 10주</dd></div>
               <div><dt>팀</dt><dd>6명 · 카카오테크 캠퍼스 4기 2단계 · 부산대 3팀</dd></div>
               <div><dt>담당</dt><dd>놀이 추천 에이전트(Activity Agent) · AI 품질 평가 · 공공데이터 연동</dd></div>
+              <div><dt>기술</dt><dd>Python · FastAPI · PostgreSQL · LLM Tool Calling · Next.js · AWS EC2</dd></div>
               <div><dt>배포</dt><dd><span class="claim">웹 · Android 웹뷰 앱. CI를 통과하면 AWS EC2에 자동 배포<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/ops/deploy-v1/">배포 문서</a></span></dd></div>
             </dl>
             <div class="facts__links">
@@ -211,13 +211,6 @@
           </p>
         </div>
 
-        <ol class="shots" aria-label="아이캐치 주요 화면 네 장">
-          <li><img src="assets/img/01-write.png" loading="lazy" width="540" height="1170" alt="홈 화면 아래 입력 칸에 한 줄을 적은 모습"><span>① 한 줄 입력</span></li>
-          <li><img src="assets/img/02-saved.png" loading="lazy" width="540" height="1170" alt="한 줄이 식사 기록 1건과 건강 기록 1건으로 저장된 화면"><span>② 기록 두 건으로 저장</span></li>
-          <li><img src="assets/img/03-suggest.png" loading="lazy" width="540" height="1170" alt="추천 이유와 사용한 기록 3건이 달린 저녁 추천 카드"><span>③ 사용한 기록이 달린 추천</span></li>
-          <li><img src="assets/img/04-approve.png" loading="lazy" width="540" height="1170" alt="찾은 일정을 캘린더에 넣을지 묻는 화면"><span>④ 일정은 승인한 뒤 등록</span></li>
-        </ol>
-        <p class="fine center">화면: 아이캐치 팀 저장소의 README</p>
       </div>
 
       <!-- 데모 -->
@@ -249,10 +242,7 @@
       <div class="wrap block" id="role">
         <h3 class="h-block">담당 역할</h3>
         <div class="read">
-          <p>
-            <span class="claim">6명 중 AI 에이전트를 맡은 2명 중 한 명입니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#만든-사람들">README</a></span>
-            <span class="claim">10주 동안 커밋 300개를 쓰고 PR 68개를 머지했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pulls?q=is%3Apr+author%3A03leedo+is%3Amerged">PR 목록</a></span>
-          </p>
+          <p><span class="claim">6명 중 AI 에이전트를 맡은 2명 중 한 명으로, 10주 동안 커밋 300개를 쓰고 PR 68개를 머지했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pulls?q=is%3Apr+author%3A03leedo+is%3Amerged">PR 목록</a></span></p>
         </div>
 
         <div class="roles">
@@ -260,206 +250,27 @@
             <div class="role__head">
               <p class="role__tag">주 담당</p>
               <h4>Activity Agent · 놀이 추천</h4>
-              <p>
-                <span class="claim">아이의 놀이 기록, 그날 날씨, 일정, 근처 장소와 행사를 함께 보고 지금 해 볼 만한 놀이를 최대 3개 추천하는 에이전트입니다. 구현 전에 설계 문서를 먼저 썼습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/159">PR #159</a><a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서</a></span>
-              </p>
+              <p><span class="claim">아이의 놀이 기록, 그날 날씨, 일정, 근처 장소와 행사를 함께 보고 지금 해 볼 만한 놀이를 최대 3개 추천하는 에이전트입니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/162">PR #162</a></span></p>
             </div>
             <ul class="ticks">
-              <li><span class="claim">Activity Agent 폴더 커밋 142개 중 116개를 작성했습니다(코드 약 7,600줄)<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/commits/develop/apps/api/app/agents/activity?author=03leedo">커밋</a></span></li>
+              <li><span class="claim">구현 전에 설계 문서(931줄 중 889줄 작성)를 먼저 써서 리뷰를 받았습니다<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서</a></span></li>
+              <li><span class="claim">폴더 커밋 142개 중 116개와 단위 테스트 696개를 작성했습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/commits/develop/apps/api/app/agents/activity?author=03leedo">커밋</a></span></li>
               <li><span class="claim">모델이 낸 후보를 위험 용어 사전과 월령으로 대조해 제외하거나 경고를 붙입니다. 이 판정은 코드가 합니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/200">PR #200</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/261">#261</a></span></li>
-              <li><span class="claim">놀이 예시 문서 80행을 현행 표준보육과정 고시 기준으로 만들었습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/332">PR #332</a></span></li>
-              <li><span class="claim"><q>다른 행사 추천해줘</q>를 앞 대화에 이어 찾고, 이미 보여 준 추천은 다시 내지 않게 했습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/853">PR #853</a></span></li>
             </ul>
           </article>
 
           <article class="role card">
             <p class="role__tag">평가</p>
-            <h4>AI 품질 점검(eval) 하네스</h4>
-            <p>
-              <span class="claim">절대 규칙을 코드로 판정하는 불변식 14개, 능력별 단발 프로브, 일주일 시나리오, 부품 10 × 장애 4의 장애 점검표를 만들었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/788">PR #788</a><a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/eval/eval-v1/">eval 문서</a></span>
-              <span class="claim">실행마다 토큰, 호출 수, 지연 시간을 함께 기록해 하루 입력 한도를 정하는 데 썼습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/eval/eval-v1/">eval 문서 §0</a></span>
-              <span class="claim">11월 10일 기준선을 잡고, 실패마다 원인을 하나로 좁혀 담당자와 이슈를 연결했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/results/2026-11-10.md">기준선 결과</a></span>
-            </p>
-          </article>
-
-          <article class="role card role--tall">
-            <p class="role__tag">연동</p>
-            <h4>공공데이터 어댑터</h4>
-            <ul class="ticks">
-              <li><span class="claim">기상청 단기예보, 에어코리아 대기질, 자외선, 기상특보를 함께 조회해 바깥 놀이가 가능한지 판정합니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/328">PR #328</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/346">#346</a></span></li>
-              <li><span class="claim">단기예보 범위 밖의 주말은 기상청 중기 육상예보로 봅니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870">PR #870</a></span></li>
-              <li><span class="claim">한국관광공사 TourAPI로 그날 열리는 축제, 공연과 박물관, 과학관을 찾습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/668">PR #668</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/858">#858</a></span></li>
-              <li><span class="claim">공원과 도서관 목록은 미리 적재해 거리를 서버 안에서 계산합니다. 보호자 좌표는 외부 API로 보내지 않습니다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/583">PR #583</a></span></li>
-              <li><span class="claim">Health Agent의 병원 찾기 tool (국립중앙의료원)<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/517">PR #517</a></span></li>
-            </ul>
+            <h4>AI 품질 평가(eval) 하네스</h4>
+            <p><span class="claim">실제 모델을 돌려 서비스 규칙 위반을 코드로 판정하는 불변식 14개, 일주일 시나리오, 장애 점검표 40칸을 만들고 설계 문서(519줄 중 498줄)를 썼습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/788">PR #788</a><a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/eval/eval-v1/">설계 문서</a></span></p>
           </article>
 
           <article class="role card">
-            <p class="role__tag">초기</p>
-            <h4>카카오 로그인</h4>
-            <p><span class="claim">첫 주에 카카오 로그인 API 명세를 쓰고, 운영 환경에 키가 없으면 서버가 시작되지 않게 했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/19">PR #19</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/98">#98</a></span></p>
+            <p class="role__tag">연동</p>
+            <h4>공공데이터 연동</h4>
+            <p><span class="claim">기상청 단기 · 중기예보, 에어코리아 대기질, 자외선, 특보로 바깥 놀이가 가능한지 판정하고, 한국관광공사 TourAPI로 그날 열리는 행사와 문화시설을 찾습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/346">PR #346</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870">#870</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/668">#668</a></span></p>
           </article>
         </div>
-
-        <figure class="timeline">
-          <figcaption class="timeline__head">
-            <h4>10주 동안 머지한 PR 68개</h4>
-            <p><span class="claim">점 하나가 PR 하나입니다. 9월에는 로그인과 설계 문서, 10월에는 에이전트 본체와 날씨, 11월에는 행사와 장소 연동, 평가를 했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pulls?q=is%3Apr+author%3A03leedo+is%3Amerged">PR 목록</a></span>
-              평가 하네스는 PR 하나(+7,808줄)라 점으로는 작게 보입니다. 점을 누르면 그 PR로 갑니다.</p>
-          </figcaption>
-          <div class="tl" id="pr-timeline">
-            <div class="tl__row tl__row--axis" aria-hidden="true"><span class="tl__label"></span>
-              <span class="tl__wk">9/7</span>
-              <span class="tl__wk">9/14</span>
-              <span class="tl__wk">9/21<i>추석</i></span>
-              <span class="tl__wk">9/28</span>
-              <span class="tl__wk">10/5</span>
-              <span class="tl__wk">10/12</span>
-              <span class="tl__wk">10/19</span>
-              <span class="tl__wk">10/26</span>
-              <span class="tl__wk">11/2</span>
-              <span class="tl__wk">11/9</span>
-            </div>
-            <div class="tl__row">
-              <span class="tl__label">Activity Agent <b>46</b></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/162" data-tip="#162 · 9/28 · Activity Agent 뼈대와 월령 게이팅 (#160)" aria-label="#162 · 9/28 · Activity Agent 뼈대와 월령 게이팅 (#160)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/159" data-tip="#159 · 9/30 · Activity Agent 설계 v1 (#126)" aria-label="#159 · 9/30 · Activity Agent 설계 v1 (#126)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/193" data-tip="#193 · 10/4 · 위치 · 장소 입력을 공공데이터 적재 설계에 맞춤 (#184)" aria-label="#193 · 10/4 · 위치 · 장소 입력을 공공데이터 적재 설계에 맞춤 (#184)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/194" data-tip="#194 · 10/5 · 날씨 판정 규칙 — 야외 가능 여부와 등급 라벨 (#185)" aria-label="#194 · 10/5 · 날씨 판정 규칙 — 야외 가능 여부와 등급 라벨 (#185)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/195" data-tip="#195 · 10/5 · 출력 검증 — 기피 거절 · 중복 · note 검사 · 근거 변환 (#186)" aria-label="#195 · 10/5 · 출력 검증 — 기피 거절 · 중복 · note 검사 · 근거 변환 (#186)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/200" data-tip="#200 · 10/5 · 위험 용어 사전 — hazard_terms.yaml 과 로더 (#199)" aria-label="#200 · 10/5 · 위험 용어 사전 — hazard_terms.yaml 과 로더 (#199)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/256" data-tip="#256 · 10/7 · 놀이 예시 activity_doc 첫 판 7행 · 시드 형식과 검사 (#255)" aria-label="#256 · 10/7 · 놀이 예시 activity_doc 첫 판 7행 · 시드 형식과 검사 (#255)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/261" data-tip="#261 · 10/10 · 안전 필터를 출력 검증 맨 앞에 — 위험 용어 · health_safety · allergens (#260)" aria-label="#261 · 10/10 · 안전 필터를 출력 검증 맨 앞에 — 위험 용어 · health_safety · allergens (#260)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/304" data-tip="#304 · 10/11 · 놀이 기억 검색 · 문서 행 조회 tool 구현 (#303)" aria-label="#304 · 10/11 · 놀이 기억 검색 · 문서 행 조회 tool 구현 (#303)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/314" data-tip="#314 · 10/11 · 위험 용어 height 축 — 높이 오르기 · 매달리기 36개월 미만 경고 (#313)" aria-label="#314 · 10/11 · 위험 용어 height 축 — 높이 오르기 · 매달리기 36개월 미만 경고 (#313)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/309" data-tip="#309 · 10/12 · 날씨 조회 tool — 네 조회를 묶어 야외 판정 (#308)" aria-label="#309 · 10/12 · 날씨 조회 tool — 네 조회를 묶어 야외 판정 (#308)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/312" data-tip="#312 · 10/12 · 일정 조회 tool · 관공서 공휴일 (#311)" aria-label="#312 · 10/12 · 일정 조회 tool · 관공서 공휴일 (#311)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/332" data-tip="#332 · 10/13 · activity_doc 시드 80행 — 현행 표준보육과정 고시 기준 (#331)" aria-label="#332 · 10/13 · activity_doc 시드 80행 — 현행 표준보육과정 고시 기준 (#331)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/359" data-tip="#359 · 10/13 · run() 실구현 — 날씨 사전 조회 · 프롬프트 · 공통 tool 루프 · 안전 필터 뒤 재호출 1회 (#358)" aria-label="#359 · 10/13 · run() 실구현 — 날씨 사전 조회 · 프롬프트 · 공통 tool 루프 · 안전 필터 뒤 재호출 1회 (#358)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/361" data-tip="#361 · 10/13 · 근거 다는 법 — 일반 추천은 [예시] 문서 행 · 기억은 고른 이유가 된 것만 (#360)" aria-label="#361 · 10/13 · 근거 다는 법 — 일반 추천은 [예시] 문서 행 · 기억은 고른 이유가 된 것만 (#360)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/344" data-tip="#344 · 10/14 · [예시] 고르기 — 요청과 겹치는 행 먼저 · 아이와 날짜로 돌림 (#343)" aria-label="#344 · 10/14 · [예시] 고르기 — 요청과 겹치는 행 먼저 · 아이와 날짜로 돌림 (#343)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/378" data-tip="#378 · 10/14 · 후보가 어느 날 하는 활동인지 받아 그날 날씨로 판정 (#377)" aria-label="#378 · 10/14 · 후보가 어느 날 하는 활동인지 받아 그날 날씨로 판정 (#377)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/383" data-tip="#383 · 10/14 · Activity 를 pipeline 에 등록 · entrypoint 가 context 를 만든다 (#380 PR 1)" aria-label="#383 · 10/14 · Activity 를 pipeline 에 등록 · entrypoint 가 context 를 만든다 (#380 PR 1)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/412" data-tip="#412 · 10/14 · health_safety 를 Food · Activity 안전 포트로 읽는 어댑터 (#405 PR A)" aria-label="#412 · 10/14 · health_safety 를 Food · Activity 안전 포트로 읽는 어댑터 (#405 PR A)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/416" data-tip="#416 · 10/14 · 러너가 health_safety 어댑터를 Activity 에 넘긴다 (#405 PR B)" aria-label="#416 · 10/14 · 러너가 health_safety 어댑터를 Activity 에 넘긴다 (#405 PR B)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/515" data-tip="#515 · 10/19 · 날씨를 묻지 않은 날은 바깥 놀이도 낸다" aria-label="#515 · 10/19 · 날씨를 묻지 않은 날은 바깥 놀이도 낸다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/557" data-tip="#557 · 10/25 · 활동과 맞지 않는 [예시] 문서를 근거로 달면 거절한다" aria-label="#557 · 10/25 · 활동과 맞지 않는 [예시] 문서를 근거로 달면 거절한다"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/556" data-tip="#556 · 10/28 · Activity · Growth 도 19종 밖 알레르기 식품을 별칭 전부로 막는다" aria-label="#556 · 10/28 · Activity · Growth 도 19종 밖 알레르기 식품을 별칭 전부로 막는다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/590" data-tip="#590 · 10/28 · #557 근거 관련성 검사 되돌리기 — 구체적인 요청에 예시를 끼워 내는 억지 추천" aria-label="#590 · 10/28 · #557 근거 관련성 검사 되돌리기 — 구체적인 요청에 예시를 끼워 내는 억지 추천"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/591" data-tip="#591 · 10/28 · Activity 근거 지시를 코드와 맞추기 — evidence 를 비우지 않는다" aria-label="#591 · 10/28 · Activity 근거 지시를 코드와 맞추기 — evidence 를 비우지 않는다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/599" data-tip="#599 · 10/28 · 보호자가 놀이를 정해 물은 일반 추천은 문서 행 근거 없이도 저장한다" aria-label="#599 · 10/28 · 보호자가 놀이를 정해 물은 일반 추천은 문서 행 근거 없이도 저장한다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/606" data-tip="#606 · 10/28 · Activity [예시]를 짧은 id 로 보여 주고, 기록 없음 안내를 근거 규칙과 맞추기" aria-label="#606 · 10/28 · Activity [예시]를 짧은 id 로 보여 주고, 기록 없음 안내를 근거 규칙과 맞추기"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/597" data-tip="#597 · 11/1 · 놀이를 정해 물으면 그 요청에 맞춰 낸다 — 일반 추천은 막연한 요청에만 [예시] 근거" aria-label="#597 · 11/1 · 놀이를 정해 물으면 그 요청에 맞춰 낸다 — 일반 추천은 막연한 요청에만 [예시] 근거"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/600" data-tip="#600 · 11/1 · 장소를 추천에 붙이기 — 러너 연결 · 장소가 붙은 추천의 확인 문구 칸" aria-label="#600 · 11/1 · 장소를 추천에 붙이기 — 러너 연결 · 장소가 붙은 추천의 확인 문구 칸"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/601" data-tip="#601 · 11/1 · 장소가 붙은 추천의 확인 문구(place_notice)를 저장하고 05 · 07 응답에 싣기" aria-label="#601 · 11/1 · 장소가 붙은 추천의 확인 문구(place_notice)를 저장하고 05 · 07 응답에 싣기"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/645" data-tip="#645 · 11/1 · Activity 날씨 조회에 실패해도 바깥 놀이를 막지 않고 확인을 맡긴다" aria-label="#645 · 11/1 · Activity 날씨 조회에 실패해도 바깥 놀이를 막지 않고 확인을 맡긴다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/653" data-tip="#653 · 11/1 · 보호자가 놀이를 정해 물은 Activity 일반 추천을 05 에도 낸다 — requested 를 행에 남긴다" aria-label="#653 · 11/1 · 보호자가 놀이를 정해 물은 Activity 일반 추천을 05 에도 낸다 — requested 를 행에 남긴다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/655" data-tip="#655 · 11/1 · 추천별 위험 경고를 그 추천의 칸(warnings)으로 싣는다 (#402)" aria-label="#655 · 11/1 · 추천별 위험 경고를 그 추천의 칸(warnings)으로 싣는다 (#402)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/657" data-tip="#657 · 11/2 · 보호자가 말한 지역으로 장소 · 날씨를 본다 — 위치 없이도 장소가 붙는다" aria-label="#657 · 11/2 · 보호자가 말한 지역으로 장소 · 날씨를 본다 — 위치 없이도 장소가 붙는다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/664" data-tip="#664 · 11/2 · 장소 이름의 &quot;~에서&quot; 중복과 (예1) 표기를 고친다 (QA · #606)" aria-label="#664 · 11/2 · 장소 이름의 &quot;~에서&quot; 중복과 (예1) 표기를 고친다 (QA · #606)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/656" data-tip="#656 · 11/5 · 추천별 위험 경고(warnings)를 저장하고 05 · 07 응답에 싣는다 (#402)" aria-label="#656 · 11/5 · 추천별 위험 경고(warnings)를 저장하고 05 · 07 응답에 싣는다 (#402)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/676" data-tip="#676 · 11/6 · Activity 지역 찾기 — 명소 이름 앞 지역을 떼어 쓰지 않고, 일산 · 광주 · 시+구 이름을 찾는다 (#657 리뷰)" aria-label="#676 · 11/6 · Activity 지역 찾기 — 명소 이름 앞 지역을 떼어 쓰지 않고, 일산 · 광주 · 시+구 이름을 찾는다 (#657 리뷰)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/677" data-tip="#677 · 11/6 · 행사가 붙은 추천에 행사 기간(시작일 · 종료일) 칸을 싣는다 (#516)" aria-label="#677 · 11/6 · 행사가 붙은 추천에 행사 기간(시작일 · 종료일) 칸을 싣는다 (#516)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/701" data-tip="#701 · 11/6 · 행사가 열리는 날을 기간이 아니라 일정 원문으로 본다 (요일 · 휴무 · 날짜별 장소)" aria-label="#701 · 11/6 · 행사가 열리는 날을 기간이 아니라 일정 원문으로 본다 (요일 · 휴무 · 날짜별 장소)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/743" data-tip="#743 · 11/9 · Activity 후보에 음식 칸(foods)을 두고 Food 판정으로 거른다 (#582)" aria-label="#743 · 11/9 · Activity 후보에 음식 칸(foods)을 두고 Food 판정으로 거른다 (#582)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/805" data-tip="#805 · 11/9 · Activity: 다른 날 놀이는 그날로 판정하고, 해 진 뒤에는 놀이터만 뺀다 (#800)" aria-label="#805 · 11/9 · Activity: 다른 날 놀이는 그날로 판정하고, 해 진 뒤에는 놀이터만 뺀다 (#800)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/820" data-tip="#820 · 11/9 · Activity: 장소를 고른 이유를 아이 상태로 먼저 쓰고, 이름만 보고 시설을 지어내지 않는다 (#814)" aria-label="#820 · 11/9 · Activity: 장소를 고른 이유를 아이 상태로 먼저 쓰고, 이름만 보고 시설을 지어내지 않는다 (#814)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/853" data-tip="#853 · 11/10 · &quot;다른 행사 추천해줘&quot; 를 앞 대화로 이어 찾고 이미 보여 준 추천을 다시 내지 않는다 (#852)" aria-label="#853 · 11/10 · &quot;다른 행사 추천해줘&quot; 를 앞 대화로 이어 찾고 이미 보여 준 추천을 다시 내지 않는다 (#852)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/856" data-tip="#856 · 11/10 · Activity: 막연한 요청에 행사 · 장소 · 다른 결을 섞고, 위치가 없으면 이유를 알린다 (#855)" aria-label="#856 · 11/10 · Activity: 막연한 요청에 행사 · 장소 · 다른 결을 섞고, 위치가 없으면 이유를 알린다 (#855)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906" data-tip="#906 · 11/11 · Activity: 행사 일정 읽기를 날씨와 같이 미리 시작하고 시간 상한을 둔다 — 캐시가 빈 첫 run 이 20초를 넘지 않게 (#905)" aria-label="#906 · 11/11 · Activity: 행사 일정 읽기를 날씨와 같이 미리 시작하고 시간 상한을 둔다 — 캐시가 빈 첫 run 이 20초를 넘지 않게 (#905)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/969" data-tip="#969 · 11/11 · Activity — 행사를 물었는데 그날 열리는 행사가 없거나 모자라면 알린다 (#968)" aria-label="#969 · 11/11 · Activity — 행사를 물었는데 그날 열리는 행사가 없거나 모자라면 알린다 (#968)"></a></span>
-            </div>
-            <div class="tl__row">
-              <span class="tl__label">공공데이터 연동 <b>12</b></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/328" data-tip="#328 · 10/12 · 날씨 어댑터 1부 — 공공데이터 공통 호출 · 기상청 단기예보 (#327)" aria-label="#328 · 10/12 · 날씨 어댑터 1부 — 공공데이터 공통 호출 · 기상청 단기예보 (#327)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/346" data-tip="#346 · 10/12 · 날씨 어댑터 2·3부 — 대기질 · 자외선 · 특보 · 네 조회 묶기 (#345)" aria-label="#346 · 10/12 · 날씨 어댑터 2·3부 — 대기질 · 자외선 · 특보 · 네 조회 묶기 (#345)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/390" data-tip="#390 · 10/15 · 입력에 흐린 좌표(선택) 받기 · 서버 시작 때 날씨 어댑터를 Activity 에 넘기기 (#380 PR 2)" aria-label="#390 · 10/15 · 입력에 흐린 좌표(선택) 받기 · 서버 시작 때 날씨 어댑터를 Activity 에 넘기기 (#380 PR 2)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/517" data-tip="#517 · 10/20 · 병원 찾기 tool · 국립중앙의료원 어댑터 (place_lookup)" aria-label="#517 · 10/20 · 병원 찾기 tool · 국립중앙의료원 어댑터 (place_lookup)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/583" data-tip="#583 · 10/28 · 장소 데이터 적재 · place 테이블과 근처 장소 어댑터 (공원 · 도서관)" aria-label="#583 · 10/28 · 장소 데이터 적재 · place 테이블과 근처 장소 어댑터 (공원 · 도서관)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/668" data-tip="#668 · 11/6 · Activity 가 그날 열리는 축제 · 공연 · 행사를 찾아 추천에 붙인다 (TourAPI)" aria-label="#668 · 11/6 · Activity 가 그날 열리는 축제 · 공연 · 행사를 찾아 추천에 붙인다 (TourAPI)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/669" data-tip="#669 · 11/6 · TourAPI 행사 어댑터를 만들어 Activity 에 넘긴다" aria-label="#669 · 11/6 · TourAPI 행사 어댑터를 만들어 Activity 에 넘긴다"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/741" data-tip="#741 · 11/6 · Health 가 병원 찾기 위치와 병원 어댑터를 받는 자리를 만든다 (#713)" aria-label="#741 · 11/6 · Health 가 병원 찾기 위치와 병원 어댑터를 받는 자리를 만든다 (#713)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/742" data-tip="#742 · 11/6 · 서버 시작 때 병원 어댑터를 만들어 입력 run 의 Health 에 넘긴다 (#713)" aria-label="#742 · 11/6 · 서버 시작 때 병원 어댑터를 만들어 입력 run 의 Health 에 넘긴다 (#713)"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/858" data-tip="#858 · 11/10 · Activity: 박물관 · 과학관 · 체험관을 TourAPI 시 · 도 목록에서 찾는다 (#857)" aria-label="#858 · 11/10 · Activity: 박물관 · 과학관 · 체험관을 TourAPI 시 · 도 목록에서 찾는다 (#857)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870" data-tip="#870 · 11/10 · Activity: 단기예보 범위 밖의 날(주말)을 기상청 중기 육상예보로 본다 (#869)" aria-label="#870 · 11/10 · Activity: 단기예보 범위 밖의 날(주말)을 기상청 중기 육상예보로 본다 (#869)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/964" data-tip="#964 · 11/11 · 날씨 — 자외선 · 대기질 · 특보 · 중기예보도 동시 조회의 실패를 같이 받는다 (#962)" aria-label="#964 · 11/11 · 날씨 — 자외선 · 대기질 · 특보 · 중기예보도 동시 조회의 실패를 같이 받는다 (#962)"></a></span>
-            </div>
-            <div class="tl__row">
-              <span class="tl__label">AI 품질 평가 <b>2</b></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/788" data-tip="#788 · 11/9 · AI 품질 점검 v1 — §2 불변식 · 단발 프로브 31 · 일주일 시나리오 · 장애 점검표 (#777)" aria-label="#788 · 11/9 · AI 품질 점검 v1 — §2 불변식 · 단발 프로브 31 · 일주일 시나리오 · 장애 점검표 (#777)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/930" data-tip="#930 · 11/10 · 11-10 골든셋 기준선 — 헤드라인 8/10 · 불변식 위반 0" aria-label="#930 · 11/10 · 11-10 골든셋 기준선 — 헤드라인 8/10 · 불변식 위반 0"></a></span>
-            </div>
-            <div class="tl__row">
-              <span class="tl__label">로그인 · 그 밖 <b>8</b></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/19" data-tip="#19 · 9/10 · 카카오 로그인 API 명세 v1 추가" aria-label="#19 · 9/10 · 카카오 로그인 API 명세 v1 추가"></a></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/57" data-tip="#57 · 9/16 · DB 테스트가 기존 데이터에 영향받지 않게" aria-label="#57 · 9/16 · DB 테스트가 기존 데이터에 영향받지 않게"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/58" data-tip="#58 · 9/16 · 복귀 URL 이 없으면 서버가 뜨지 않게" aria-label="#58 · 9/16 · 복귀 URL 이 없으면 서버가 뜨지 않게"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/62" data-tip="#62 · 9/16 · develop 에서 깨진 정책 버전 테스트 복구" aria-label="#62 · 9/16 · develop 에서 깨진 정책 버전 테스트 복구"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/95" data-tip="#95 · 9/18 · 1회용 코드를 발급된 provider 로만 소비하게" aria-label="#95 · 9/18 · 1회용 코드를 발급된 provider 로만 소비하게"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/98" data-tip="#98 · 9/18 · 운영 환경 카카오 키 누락 시 서버 실행 차단" aria-label="#98 · 9/18 · 운영 환경 카카오 키 누락 시 서버 실행 차단"></a></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"></span>
-              <span class="tl__cell"><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/821" data-tip="#821 · 11/9 · 날짜 뒤 요일 괄호(&quot;11월 27일(금)&quot;)를 읽고 요일로 검산한다 (#797)" aria-label="#821 · 11/9 · 날짜 뒤 요일 괄호(&quot;11월 27일(금)&quot;)를 읽고 요일로 검산한다 (#797)"></a><a class="tl__dot" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/841" data-tip="#841 · 11/10 · 선생님 · 알림장이 전한 급식 먹은 양을 급식 갱신으로 보낸다 (#798)" aria-label="#841 · 11/10 · 선생님 · 알림장이 전한 급식 먹은 양을 급식 갱신으로 보낸다 (#798)"></a></span>
-            </div>
-            <div class="tl__row tl__row--sum" aria-hidden="true"><span class="tl__label">주별 합계</span>
-              <span class="tl__wk">1</span>
-              <span class="tl__wk">5</span>
-              <span class="tl__wk"></span>
-              <span class="tl__wk">3</span>
-              <span class="tl__wk">7</span>
-              <span class="tl__wk">13</span>
-              <span class="tl__wk">3</span>
-              <span class="tl__wk">12</span>
-              <span class="tl__wk">10</span>
-              <span class="tl__wk">14</span>
-            </div>
-          </div>
-          <details class="tl-table">
-            <summary>표로 보기 · PR 68개</summary>
-            <div class="tl-table__scroll"><table>
-              <thead><tr><th>PR</th><th>머지</th><th>영역</th><th>제목</th></tr></thead><tbody>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/19">#19</a></td><td>2026-09-10</td><td>로그인 · 그 밖</td><td>카카오 로그인 API 명세 v1 추가</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/57">#57</a></td><td>2026-09-16</td><td>로그인 · 그 밖</td><td>DB 테스트가 기존 데이터에 영향받지 않게</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/58">#58</a></td><td>2026-09-16</td><td>로그인 · 그 밖</td><td>복귀 URL 이 없으면 서버가 뜨지 않게</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/62">#62</a></td><td>2026-09-16</td><td>로그인 · 그 밖</td><td>develop 에서 깨진 정책 버전 테스트 복구</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/95">#95</a></td><td>2026-09-18</td><td>로그인 · 그 밖</td><td>1회용 코드를 발급된 provider 로만 소비하게</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/98">#98</a></td><td>2026-09-18</td><td>로그인 · 그 밖</td><td>운영 환경 카카오 키 누락 시 서버 실행 차단</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/162">#162</a></td><td>2026-09-28</td><td>Activity Agent</td><td>Activity Agent 뼈대와 월령 게이팅 (#160)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/159">#159</a></td><td>2026-09-30</td><td>Activity Agent</td><td>Activity Agent 설계 v1 (#126)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/193">#193</a></td><td>2026-10-04</td><td>Activity Agent</td><td>위치 · 장소 입력을 공공데이터 적재 설계에 맞춤 (#184)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/194">#194</a></td><td>2026-10-05</td><td>Activity Agent</td><td>날씨 판정 규칙 — 야외 가능 여부와 등급 라벨 (#185)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/195">#195</a></td><td>2026-10-05</td><td>Activity Agent</td><td>출력 검증 — 기피 거절 · 중복 · note 검사 · 근거 변환 (#186)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/200">#200</a></td><td>2026-10-05</td><td>Activity Agent</td><td>위험 용어 사전 — hazard_terms.yaml 과 로더 (#199)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/256">#256</a></td><td>2026-10-07</td><td>Activity Agent</td><td>놀이 예시 activity_doc 첫 판 7행 · 시드 형식과 검사 (#255)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/261">#261</a></td><td>2026-10-10</td><td>Activity Agent</td><td>안전 필터를 출력 검증 맨 앞에 — 위험 용어 · health_safety · allergens (#260)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/304">#304</a></td><td>2026-10-11</td><td>Activity Agent</td><td>놀이 기억 검색 · 문서 행 조회 tool 구현 (#303)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/314">#314</a></td><td>2026-10-11</td><td>Activity Agent</td><td>위험 용어 height 축 — 높이 오르기 · 매달리기 36개월 미만 경고 (#313)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/309">#309</a></td><td>2026-10-12</td><td>Activity Agent</td><td>날씨 조회 tool — 네 조회를 묶어 야외 판정 (#308)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/312">#312</a></td><td>2026-10-12</td><td>Activity Agent</td><td>일정 조회 tool · 관공서 공휴일 (#311)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/328">#328</a></td><td>2026-10-12</td><td>공공데이터 연동</td><td>날씨 어댑터 1부 — 공공데이터 공통 호출 · 기상청 단기예보 (#327)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/346">#346</a></td><td>2026-10-12</td><td>공공데이터 연동</td><td>날씨 어댑터 2·3부 — 대기질 · 자외선 · 특보 · 네 조회 묶기 (#345)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/332">#332</a></td><td>2026-10-13</td><td>Activity Agent</td><td>activity_doc 시드 80행 — 현행 표준보육과정 고시 기준 (#331)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/359">#359</a></td><td>2026-10-13</td><td>Activity Agent</td><td>run() 실구현 — 날씨 사전 조회 · 프롬프트 · 공통 tool 루프 · 안전 필터 뒤 재호출 1회 (#358)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/361">#361</a></td><td>2026-10-13</td><td>Activity Agent</td><td>근거 다는 법 — 일반 추천은 [예시] 문서 행 · 기억은 고른 이유가 된 것만 (#360)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/344">#344</a></td><td>2026-10-14</td><td>Activity Agent</td><td>[예시] 고르기 — 요청과 겹치는 행 먼저 · 아이와 날짜로 돌림 (#343)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/378">#378</a></td><td>2026-10-14</td><td>Activity Agent</td><td>후보가 어느 날 하는 활동인지 받아 그날 날씨로 판정 (#377)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/383">#383</a></td><td>2026-10-14</td><td>Activity Agent</td><td>Activity 를 pipeline 에 등록 · entrypoint 가 context 를 만든다 (#380 PR 1)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/412">#412</a></td><td>2026-10-14</td><td>Activity Agent</td><td>health_safety 를 Food · Activity 안전 포트로 읽는 어댑터 (#405 PR A)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/416">#416</a></td><td>2026-10-14</td><td>Activity Agent</td><td>러너가 health_safety 어댑터를 Activity 에 넘긴다 (#405 PR B)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/390">#390</a></td><td>2026-10-15</td><td>공공데이터 연동</td><td>입력에 흐린 좌표(선택) 받기 · 서버 시작 때 날씨 어댑터를 Activity 에 넘기기 (#380 PR 2)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/515">#515</a></td><td>2026-10-19</td><td>Activity Agent</td><td>날씨를 묻지 않은 날은 바깥 놀이도 낸다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/517">#517</a></td><td>2026-10-20</td><td>공공데이터 연동</td><td>병원 찾기 tool · 국립중앙의료원 어댑터 (place_lookup)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/557">#557</a></td><td>2026-10-25</td><td>Activity Agent</td><td>활동과 맞지 않는 [예시] 문서를 근거로 달면 거절한다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/556">#556</a></td><td>2026-10-28</td><td>Activity Agent</td><td>Activity · Growth 도 19종 밖 알레르기 식품을 별칭 전부로 막는다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/583">#583</a></td><td>2026-10-28</td><td>공공데이터 연동</td><td>장소 데이터 적재 · place 테이블과 근처 장소 어댑터 (공원 · 도서관)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/590">#590</a></td><td>2026-10-28</td><td>Activity Agent</td><td>#557 근거 관련성 검사 되돌리기 — 구체적인 요청에 예시를 끼워 내는 억지 추천</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/591">#591</a></td><td>2026-10-28</td><td>Activity Agent</td><td>Activity 근거 지시를 코드와 맞추기 — evidence 를 비우지 않는다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/599">#599</a></td><td>2026-10-28</td><td>Activity Agent</td><td>보호자가 놀이를 정해 물은 일반 추천은 문서 행 근거 없이도 저장한다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/606">#606</a></td><td>2026-10-28</td><td>Activity Agent</td><td>Activity [예시]를 짧은 id 로 보여 주고, 기록 없음 안내를 근거 규칙과 맞추기</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/597">#597</a></td><td>2026-11-01</td><td>Activity Agent</td><td>놀이를 정해 물으면 그 요청에 맞춰 낸다 — 일반 추천은 막연한 요청에만 [예시] 근거</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/600">#600</a></td><td>2026-11-01</td><td>Activity Agent</td><td>장소를 추천에 붙이기 — 러너 연결 · 장소가 붙은 추천의 확인 문구 칸</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/601">#601</a></td><td>2026-11-01</td><td>Activity Agent</td><td>장소가 붙은 추천의 확인 문구(place_notice)를 저장하고 05 · 07 응답에 싣기</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/645">#645</a></td><td>2026-11-01</td><td>Activity Agent</td><td>Activity 날씨 조회에 실패해도 바깥 놀이를 막지 않고 확인을 맡긴다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/653">#653</a></td><td>2026-11-01</td><td>Activity Agent</td><td>보호자가 놀이를 정해 물은 Activity 일반 추천을 05 에도 낸다 — requested 를 행에 남긴다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/655">#655</a></td><td>2026-11-01</td><td>Activity Agent</td><td>추천별 위험 경고를 그 추천의 칸(warnings)으로 싣는다 (#402)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/657">#657</a></td><td>2026-11-02</td><td>Activity Agent</td><td>보호자가 말한 지역으로 장소 · 날씨를 본다 — 위치 없이도 장소가 붙는다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/664">#664</a></td><td>2026-11-02</td><td>Activity Agent</td><td>장소 이름의 &quot;~에서&quot; 중복과 (예1) 표기를 고친다 (QA · #606)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/656">#656</a></td><td>2026-11-05</td><td>Activity Agent</td><td>추천별 위험 경고(warnings)를 저장하고 05 · 07 응답에 싣는다 (#402)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/668">#668</a></td><td>2026-11-06</td><td>공공데이터 연동</td><td>Activity 가 그날 열리는 축제 · 공연 · 행사를 찾아 추천에 붙인다 (TourAPI)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/669">#669</a></td><td>2026-11-06</td><td>공공데이터 연동</td><td>TourAPI 행사 어댑터를 만들어 Activity 에 넘긴다</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/676">#676</a></td><td>2026-11-06</td><td>Activity Agent</td><td>Activity 지역 찾기 — 명소 이름 앞 지역을 떼어 쓰지 않고, 일산 · 광주 · 시+구 이름을 찾는다 (#657 리뷰)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/677">#677</a></td><td>2026-11-06</td><td>Activity Agent</td><td>행사가 붙은 추천에 행사 기간(시작일 · 종료일) 칸을 싣는다 (#516)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/701">#701</a></td><td>2026-11-06</td><td>Activity Agent</td><td>행사가 열리는 날을 기간이 아니라 일정 원문으로 본다 (요일 · 휴무 · 날짜별 장소)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/741">#741</a></td><td>2026-11-06</td><td>공공데이터 연동</td><td>Health 가 병원 찾기 위치와 병원 어댑터를 받는 자리를 만든다 (#713)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/742">#742</a></td><td>2026-11-06</td><td>공공데이터 연동</td><td>서버 시작 때 병원 어댑터를 만들어 입력 run 의 Health 에 넘긴다 (#713)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/743">#743</a></td><td>2026-11-09</td><td>Activity Agent</td><td>Activity 후보에 음식 칸(foods)을 두고 Food 판정으로 거른다 (#582)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/788">#788</a></td><td>2026-11-09</td><td>AI 품질 평가</td><td>AI 품질 점검 v1 — §2 불변식 · 단발 프로브 31 · 일주일 시나리오 · 장애 점검표 (#777)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/805">#805</a></td><td>2026-11-09</td><td>Activity Agent</td><td>Activity: 다른 날 놀이는 그날로 판정하고, 해 진 뒤에는 놀이터만 뺀다 (#800)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/820">#820</a></td><td>2026-11-09</td><td>Activity Agent</td><td>Activity: 장소를 고른 이유를 아이 상태로 먼저 쓰고, 이름만 보고 시설을 지어내지 않는다 (#814)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/821">#821</a></td><td>2026-11-09</td><td>로그인 · 그 밖</td><td>날짜 뒤 요일 괄호(&quot;11월 27일(금)&quot;)를 읽고 요일로 검산한다 (#797)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/841">#841</a></td><td>2026-11-10</td><td>로그인 · 그 밖</td><td>선생님 · 알림장이 전한 급식 먹은 양을 급식 갱신으로 보낸다 (#798)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/853">#853</a></td><td>2026-11-10</td><td>Activity Agent</td><td>&quot;다른 행사 추천해줘&quot; 를 앞 대화로 이어 찾고 이미 보여 준 추천을 다시 내지 않는다 (#852)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/856">#856</a></td><td>2026-11-10</td><td>Activity Agent</td><td>Activity: 막연한 요청에 행사 · 장소 · 다른 결을 섞고, 위치가 없으면 이유를 알린다 (#855)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/858">#858</a></td><td>2026-11-10</td><td>공공데이터 연동</td><td>Activity: 박물관 · 과학관 · 체험관을 TourAPI 시 · 도 목록에서 찾는다 (#857)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870">#870</a></td><td>2026-11-10</td><td>공공데이터 연동</td><td>Activity: 단기예보 범위 밖의 날(주말)을 기상청 중기 육상예보로 본다 (#869)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/930">#930</a></td><td>2026-11-10</td><td>AI 품질 평가</td><td>11-10 골든셋 기준선 — 헤드라인 8/10 · 불변식 위반 0</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">#906</a></td><td>2026-11-11</td><td>Activity Agent</td><td>Activity: 행사 일정 읽기를 날씨와 같이 미리 시작하고 시간 상한을 둔다 — 캐시가 빈 첫 run 이 20초를 넘지 않게 (#905)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/964">#964</a></td><td>2026-11-11</td><td>공공데이터 연동</td><td>날씨 — 자외선 · 대기질 · 특보 · 중기예보도 동시 조회의 실패를 같이 받는다 (#962)</td></tr>
-                <tr><td><a href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/969">#969</a></td><td>2026-11-11</td><td>Activity Agent</td><td>Activity — 행사를 물었는데 그날 열리는 행사가 없거나 모자라면 알린다 (#968)</td></tr>
-              </tbody></table></div>
-          </details>
-        </figure>
       </div>
 
       <!-- 흐름 (인터랙티브) -->
@@ -565,45 +376,13 @@
           </p>
         </div>
 
-        <div class="fails">
-          <div class="fails__head">
-            <h4>예외 처리</h4>
-            <p>외부 API가 실패하거나 모델이 예상과 다르게 답할 때의 동작도 코드로 정했습니다. 확인하지 못한 정보는 확인하지 못했다고 표시합니다.</p>
-          </div>
-          <dl class="fails__list">
-            <div>
-              <dt>날씨를 못 읽었다</dt>
-              <dd><span class="claim">바깥 놀이를 막지 않고 <q>날씨를 확인하지 못했어요</q>를 붙입니다. 결과에는 일부만 확인했다는 표시(degraded)를 남깁니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/645">PR #645</a></span></dd>
-            </div>
-            <div>
-              <dt>안전 정보를 읽을 길이 없다</dt>
-              <dd><span class="claim">추천을 만들지 않고 닫습니다(blocked). 알레르기를 모르는 채로 <q>없음</q>으로 넘기지 않습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 §3-2</a></span></dd>
-            </div>
-            <div>
-              <dt>후보가 전부 안전 필터에 걸렸다</dt>
-              <dd><span class="claim">한 번 더 부르고, 그래도 없으면 예시 문서로 채우지 않고 안내만 냅니다. 요청한 음식이 막혔으면 보호자가 쓴 말로 그 사실을 알리고, 등록한 알레르기 이름은 싣지 않습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/743">PR #743</a></span></dd>
-            </div>
-            <div>
-              <dt>모델이 tool 대신 말로 끝냈다</dt>
-              <dd><span class="claim">실패(failed)로 끝냅니다. 모델이 쓴 문장은 화면에 내지 않습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 §3-2</a></span></dd>
-            </div>
-            <div>
-              <dt>조회 결과에 없는 장소 이름을 썼다</dt>
-              <dd><span class="claim">그 후보를 거절해 모델이 다시 쓰게 합니다. 장소 이름은 이번 조회 결과에 있는 것만 받습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 §3-3</a></span></dd>
-            </div>
-            <div>
-              <dt>행사 일정 읽기가 늦다</dt>
-              <dd><span class="claim">이번 결과에서만 빼고 <q>행사 일정을 아직 확인하고 있어요</q>라고 알립니다. 읽기는 뒤에서 이어 가 다음 질문이 캐시를 씁니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></dd>
-            </div>
-          </dl>
-        </div>
       </div>
 
       <!-- 부딪힌 것 -->
       <div class="wrap block" id="troubles">
         <h3 class="h-block">트러블슈팅</h3>
         <div class="read">
-          <p>개발하면서 겪은 문제 중 세 가지를 골랐습니다. 각 항목에 문제, 해결, 리뷰 반영, 배운 점과 변경 전후 수치를 적었습니다.</p>
+          <p>개발하면서 겪은 문제 중 세 가지입니다.</p>
         </div>
 
         <div class="stories">
@@ -615,8 +394,6 @@
             <dl class="story__dl">
               <div><dt>문제</dt><dd><span class="claim">일반 추천 <q>종이컵 쌓기</q>에 상관없는 <q>노래하며 손 씻기</q> 문서가 근거로 붙었습니다. 그래서 관련성 검사를 추가했는데, 함께 바꾼 프롬프트 지시 때문에 모델이 예시 문서를 베낀 추천을 더 많이 냈습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/557">PR #557</a></span></dd></div>
               <div><dt>해결</dt><dd><span class="claim">변경을 되돌리고, 영향 범위를 확인하지 않은 것이 원인이었다고 PR에 적었습니다. 이후 보호자가 놀이를 정해 물으면 그 요청에 맞춰 추천하도록 다시 설계했습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/590">PR #590</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/597">#597</a></span></dd></div>
-              <div><dt>리뷰 반영</dt><dd><span class="claim">리뷰어가 <q>모델이 요청 놀이 칸을 지어 넣으면 근거 검사를 면제받는다</q>고 지적했습니다. 보호자가 실제로 쓴 문장에 그 놀이가 있을 때만 면제하도록 고쳤고, 재리뷰에서 <q>놀이 추천해줘</q>가 여전히 통과한다는 지적을 받아 날짜, 장소, 날씨 낱말을 뺀 나머지 낱말이 모두 있어야 하도록 조건을 좁혔습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#8-근거-검사를-더하자-억지-추천이-늘었다">기록</a></span></dd></div>
-              <div><dt>측정 후 결정</dt><dd><span class="claim">후보가 요청에 맞는지 코드로 막기 전에 먼저 측정했습니다. 요청 기반 후보 391개를 다른 모델로 판정하고, 판정 모델을 믿을 수 있는지 보려고 일부러 엇갈리게 붙인 대조군 120개를 함께 넣었습니다. 관계없는 후보가 1건뿐이어서 코드 검사는 추가하지 않았습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#8-근거-검사를-더하자-억지-추천이-늘었다">기록</a></span></dd></div>
               <div class="story__learn"><dt>배운 점</dt><dd>프롬프트 지시 한 줄이 코드 검사보다 결과를 크게 바꿀 수 있다는 것을 알았습니다. 이후에는 바꾼 것을 하나씩 나눠, 같은 케이스로 변경 전후를 측정합니다.</dd></div>
             </dl>
             <div class="story__nums">
@@ -635,22 +412,12 @@
               <div><dt>문제</dt><dd><span class="claim">놀이 문장에서 알레르기 식품 이름을 글자로 찾았더니 <q>장난감 자동차</q>가 감자로 걸렸고, 밀 알레르기 아이에게 <q>쿠키 반죽 빚어 굽기</q>는 통과했습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#9-알레르기를-막으면-새고-풀면-오탐이-난다">기록</a></span></dd></div>
               <div><dt>해결</dt><dd><span class="claim">사례 몇 개가 아니라 시드 데이터 전체(놀이 80행, 교육 104행 × 식품 이름 77개)로 회귀 테스트를 걸어 오탐을 없앴습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/556">PR #556</a></span>
                 <span class="claim">그래도 요리 이름은 계속 빠져나가서 출력 구조를 바꿨습니다. 후보에 음식 칸을 두고, 그 칸을 Food 에이전트의 메뉴 판정으로 거릅니다. 알레르기 이름은 여전히 모델에 보내지 않습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/issues/582">실험 #582</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/743">PR #743</a></span></dd></div>
-              <div><dt>리뷰 반영</dt><dd><span class="claim">리뷰어가 Food의 식품 별칭을 놀이 문장에 그대로 쓰면 사과 알레르기 아이에게 <q>친구에게 사과하기</q>가 막힌다고 지적했습니다. 문장용 규칙을 따로 두고, 함께 쓰는 매처에 띄어쓰기를 넘지 않는 옵션을 더하는 것은 API 파트와 상의해 정했습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#9-알레르기를-막으면-새고-풀면-오탐이-난다">기록</a></span></dd></div>
               <div class="story__learn"><dt>배운 점</dt><dd>전체 데이터로 회귀 테스트를 걸어야 숨은 오탐이 보였습니다. 글자 대조에서 누락이 반복될 때는 규칙을 늘리기보다 모델이 채우는 출력 구조를 바꾸는 편이 나았습니다.</dd></div>
             </dl>
             <div class="story__nums">
                 <div class="num"><span class="num__v">17 → 0</span><span class="num__k claim">시드 전수 테스트의 오탐<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/556">PR #556</a></span></div>
                 <div class="num"><span class="num__v">17 → 3</span><span class="num__k claim">알레르기 음식을 실제로 먹거나 만지는 추천 (54케이스 · 로컬 실험, 머지 뒤 재측정은 남음)<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#9-알레르기를-막으면-새고-풀면-오탐이-난다">측정</a></span></div>
             </div>
-            <figure class="code code--wide">
-                <figcaption><span>모델이 채우는 후보 칸 (실제 코드에서 줄임)</span><a class="link" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/apps/api/app/agents/activity/schemas/recommend.py">recommend.py</a></figcaption>
-<pre><code><span class="k">class</span> ActivityCandidate(ToolArgs):
-    content: str            <span class="c"># 놀이 후보. 예: 종이컵으로 탑 쌓기</span>
-    materials: list[str]    <span class="c"># 쓰는 물건을 빠짐없이</span>
-    foods: list[str]        <span class="c"># 만지거나 먹는 음식을 하나씩.</span>
-                            <span class="c"># 안전 검사는 코드가 이 목록으로 한다</span>
-    involves_food: bool     <span class="c"># true 인데 foods 가 비면 다시 적게 한다</span></code></pre>
-            </figure>
           </article>
 
           <article class="story card">
@@ -661,7 +428,6 @@
             <dl class="story__dl">
               <div><dt>문제</dt><dd><span class="claim">캐시가 빈 첫 실행에서 <q>주말에 갈만한 행사 추천해줘</q>가 <q>시간 안에 답을 만들지 못했어요</q>로 끝났습니다. Activity Agent만 17~19초가 걸려 앞 단계까지 더하면 20초를 넘었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></dd></div>
               <div><dt>해결</dt><dd><span class="claim">행사 일정 읽기를 날씨 조회와 동시에 시작하고 시간 상한을 뒀습니다. 마감이 가까우면 마지막 후보 작성에 6초를 남기고, 못 읽은 행사는 이번 결과에서만 빼고 백그라운드에서 캐시를 채웁니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></dd></div>
-              <div><dt>리뷰 반영</dt><dd><span class="claim">요청에 지역 이름이 있으면 미리 읽기를 하지 않게 했고, 결과가 비었을 때 <q>새 행사 없음</q>이 아니라 <q>아직 확인 중</q>이라고 알리도록 고쳤습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">PR #906</a></span></dd></div>
               <div class="story__learn"><dt>배운 점</dt><dd>느린 외부 호출은 끝까지 기다리지 않고 시간 상한을 둡니다. 이번에 못 읽은 결과는 백그라운드에서 캐시에 채워 다음 요청에서 쓰게 했습니다.</dd></div>
             </dl>
             <div class="story__nums">
@@ -672,115 +438,6 @@
         </div>
       </div>
 
-      <!-- 결과 -->
-      <div class="wrap block" id="results">
-        <h3 class="h-block">결과</h3>
-        <div class="read">
-          <p>제가 만든 평가 하네스로 실제 모델을 돌려 측정한 팀 전체 결과입니다.</p>
-        </div>
-        <div class="kpis">
-          <div class="kpi">
-            <p class="kpi__v">0<small>건</small></p>
-            <p class="kpi__k">절대 규칙 위반</p>
-            <p class="kpi__d"><span class="claim">147회 실행을 코드로 판정 · 11-10 기준선<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/results/2026-11-10.md">결과</a></span></p>
-          </div>
-          <div class="kpi">
-            <p class="kpi__v">9<small>/10</small></p>
-            <p class="kpi__k">기획 때 정한 시나리오</p>
-            <p class="kpi__d"><span class="claim">실제 모델 · 3회 모두 통과해야 통과 · 11-11<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/results/2026-11-11-headline.md">결과</a></span></p>
-          </div>
-          <div class="kpi">
-            <p class="kpi__v">39<small>/40</small></p>
-            <p class="kpi__k">장애 점검</p>
-            <p class="kpi__d"><span class="claim">부품 10 × 장애 4 · <code>make test</code> 마다<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/faults.md">점검표</a></span></p>
-          </div>
-          <div class="kpi">
-            <p class="kpi__v">4.4<small>초</small></p>
-            <p class="kpi__k">기록 한 줄 응답 중앙값</p>
-            <p class="kpi__d"><span class="claim">20초를 넘겨 부분 결과로 바뀐 실행 0 / 143<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#정말-그렇게-움직이는지-쟀습니다">README</a></span></p>
-          </div>
-        </div>
-
-        <div class="mine">
-          <h4>개인 기여</h4>
-          <ul class="mine__list">
-            <li><b>116/142</b><span class="claim">Activity Agent 폴더 커밋 중 제 커밋<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/commits/develop/apps/api/app/agents/activity?author=03leedo">커밋</a></span></li>
-            <li><b>696</b><span class="claim">Activity Agent 단위 테스트 함수<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/tree/develop/apps/api/tests/unit/agents/activity">테스트 폴더</a></span></li>
-            <li><b>68</b><span class="claim">머지한 PR (팀 전체 553개)<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pulls?q=is%3Apr+author%3A03leedo+is%3Amerged">PR 목록</a></span></li>
-            <li><b>6</b><span class="claim">요청마다 부르는 공공데이터 API. 기상청 단기예보, 중기예보, 자외선, 특보와 에어코리아 대기질, TourAPI 행사<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 D8</a><a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/870">#870</a></span></li>
-          </ul>
-        </div>
-
-        <aside class="honest">
-          <h4>한계와 남은 과제</h4>
-          <ul>
-            <li><span class="claim">실제 사용자는 아직 거의 없습니다(팀과 테스터). 위 수치는 모두 미리 준비한 입력으로 측정한 값입니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#정말-그렇게-움직이는지-쟀습니다">README</a></span></li>
-            <li><span class="claim">추천 카드의 채택과 평가는 아직 아이의 성향에 반영되지 않습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">설계 문서 §1</a></span></li>
-            <li><span class="claim">후보가 보호자의 요청에 맞는지는 코드로 검사하지 않고 사람이 결과를 확인합니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/overview/troubles-v1/#8-근거-검사를-더하자-억지-추천이-늘었다">기록</a></span></li>
-          </ul>
-        </aside>
-      </div>
-
-      <!-- 쓴 문서 -->
-      <div class="wrap block" id="writing">
-        <h3 class="h-block">설계 문서</h3>
-        <div class="read">
-          <p>구현 전에 설계 문서를 먼저 써서 리뷰를 받았습니다. 결정과 이유가 문서에 있어서 리뷰어가 코드를 읽기 전에 방향을 확인할 수 있었습니다.</p>
-        </div>
-        <ul class="docs">
-          <li class="doc">
-            <a class="doc__title" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/agents/activity/activity-agent-v1/">Activity Agent 설계 v1</a>
-            <p class="doc__meta"><span class="claim">931줄 중 889줄 작성<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blame/develop/docs/agents/activity/activity-agent-v1.md">blame</a></span></p>
-            <p class="doc__desc"><span class="claim">결정 12개(D1–D12), 실행 흐름, 출력 검증 순서, 코드가 막는 안전 규칙, 테스트 계획. 코드가 0줄일 때 먼저 써서 리뷰를 받았습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/159">PR #159</a></span></p>
-          </li>
-          <li class="doc">
-            <a class="doc__title" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/eval/eval-v1/">AI 품질 점검 설계 (eval v1)</a>
-            <p class="doc__meta"><span class="claim">519줄 중 498줄 작성<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blame/develop/docs/eval/eval-v1.md">blame</a></span></p>
-            <p class="doc__desc"><span class="claim">하네스 1개와 스위트 4개, 절대 규칙을 코드로 판정하는 불변식 14개. 한 줄짜리 시나리오 10개로는 승격 · 낡은 기억 · 정정 같은 여러 날의 성질을 못 봐서 구조를 다시 짠 이유를 적었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/788">PR #788</a></span></p>
-          </li>
-          <li class="doc">
-            <a class="doc__title" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/api/auth-kakao-v1/">카카오 로그인 API 명세 v1</a>
-            <p class="doc__meta"><span class="claim">933줄 중 703줄 작성<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blame/develop/docs/api/auth-kakao-v1.md">blame</a></span></p>
-            <p class="doc__desc"><span class="claim">프로젝트 첫 주에 쓴 로그인 흐름과 엔드포인트 명세입니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/19">PR #19</a></span></p>
-          </li>
-          <li class="doc">
-            <a class="doc__title" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blob/develop/eval/faults.md">장애 점검표</a>
-            <p class="doc__meta"><span class="claim">182줄 중 170줄 작성<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/blame/develop/eval/faults.md">blame</a></span></p>
-            <p class="doc__desc"><span class="claim">부품 10개 × 장애 4가지 = 40칸 지도. 기존 테스트가 이미 판정하는 칸을 먼저 찾고 남은 구멍만 테스트로 메웠습니다.<a class="ev" href="https://kakaotechcampus-4.github.io/ktc4-pusan-3/eval/eval-v1/">eval 문서 §0</a></span></p>
-          </li>
-        </ul>
-        <p class="fine">
-          <span class="claim">PR 본문에는 <q>리뷰에서 봐주셨으면 하는 곳</q>과 전후 측정표를 같이 적었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3/pull/906">예: PR #906</a></span>
-        </p>
-      </div>
-
-      <!-- 기술 -->
-      <div class="wrap block" id="tech">
-        <h3 class="h-block">기술 스택</h3>
-        <div class="tech">
-          <div class="tech__col">
-            <h4>제가 직접 쓴 기술</h4>
-            <ul class="tags tags--lg">
-              <li>Python 3.12</li><li>FastAPI</li><li>Pydantic</li><li>asyncio</li>
-              <li>PostgreSQL</li><li>Alembic</li>
-              <li>LLM Tool Calling</li><li>Structured Output</li>
-              <li>pytest</li>
-              <li>기상청 · 에어코리아 API</li><li>TourAPI</li><li>공공데이터포털</li>
-            </ul>
-          </div>
-          <div class="tech__col">
-            <h4>팀 전체 스택</h4>
-            <ul class="tags tags--lg tags--muted">
-              <li>Next.js 16</li><li>React 19</li><li>Expo WebView</li>
-              <li>pgvector</li><li>Redis 7</li><li>Docker Compose</li><li>Caddy 2</li>
-              <li>GitHub Actions</li><li>AWS EC2 · S3</li><li>Grafana Cloud</li>
-            </ul>
-            <p class="fine">
-              <span class="claim">방금 저장한 기록이 같은 요청의 추천 근거로 잡혀야 해서 백엔드와 AI를 한 서비스로 묶었고, 벡터 DB를 따로 두지 않고 PostgreSQL 한 곳에 두었습니다.<a class="ev" href="https://github.com/kakaotechcampus-4/ktc4-pusan-3#어떻게-만들었나">README</a></span>
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ───────────────────────── 다른 작업 ───────────────────────── -->
@@ -886,7 +543,6 @@
     </div>
   </footer>
 
-  <div class="tip" id="tip" role="tooltip" hidden></div>
   <script src="assets/main.js" defer></script>
 </body>
 </html>
