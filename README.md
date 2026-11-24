@@ -2,7 +2,7 @@
 
 이도헌(03leedo)의 포트폴리오 · https://03leedo.github.io/
 
-- 연락처: hero9573@naver.com · [GitHub](https://github.com/03leedo)
+- 연락처: [GitHub](https://github.com/03leedo)
 - 대표 프로젝트: 카카오테크 캠퍼스 4기 팀 프로젝트 [아이캐치](https://github.com/kakaotechcampus-4/ktc4-pusan-3). 놀이 추천 에이전트(Activity Agent)와 AI 품질 평가(eval)를 맡았습니다.
 - 수상: 제7회 PNU 창의융합 AI 해커톤 우수상(3위, [FarmBroker](https://github.com/03leedo/pnuai-b-06-bomdongmarket)) · 카카오테크 캠퍼스 4기 아이디어톤 우수상
 - 교육: 카카오테크 캠퍼스 4기 Agentic AI 과정 수료 · 부산대학교 정보컴퓨터공학부 재학
